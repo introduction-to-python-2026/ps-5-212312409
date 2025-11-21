@@ -23,8 +23,6 @@ def split_at_number(formula):
     return formula, 1
 
 def count_atoms_in_molecule(molecular_formula):
-    """Takes a molecular formula (string) and returns a dictionary of atom counts.  
-    Example: 'H2O' → {'H': 2, 'O': 1}"""
 
     # Step 1: Initialize an empty dictionary to store atom counts
     atom_dict = {}
