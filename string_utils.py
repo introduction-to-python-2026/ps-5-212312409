@@ -10,7 +10,7 @@ def split_before_uppercases(formula):
         if formula[i].isupper():
             end = i
             split_formula.append(formula[start:end])
-        start = end
+            start = end
     
     split_formula.append(formula[start:])
     return split_formula
