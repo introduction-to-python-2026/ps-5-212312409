@@ -1,13 +1,10 @@
-
-
-
 def split_before_uppercases(formula):
     split_formula = []
     start = 0
     end = 0   
     
     if formula == "":
-      return split_formula
+        return split_formula
 
     for i in range(1, len(formula)):
         if formula[i].isupper():
@@ -40,14 +37,6 @@ def count_atoms_in_molecule(molecular_formula):
     
     return atom_dict
     
-   # for atom in split_by_capitals(molecular_formula):
-   #     atom_name, atom_count = split_at_number(atom)
-   #
-   # Step 2: Update the dictionary with the atom name and count
-
-   # Step 3: Return the completed dictionary
-
-
 
 def parse_chemical_reaction(reaction_equation):
     """Takes a reaction equation (string) and returns reactants and products as lists.  
