@@ -1,4 +1,12 @@
 # Add the import statements for functions from string_utils.py and equation_utils.py here
+import split_before_uppercases
+import split_at_digit
+import count_atoms_in_molecule
+import equation_utils.py
+import parse_chemical_reaction
+import count_atoms_in_reaction
+import build_equations
+import my_solve
 
 
 def balance_reaction(reaction): #"Fe2O3 + H2 -> Fe + H2O"
