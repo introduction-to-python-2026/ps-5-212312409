@@ -1,5 +1,5 @@
 # Add the import statements for necessary sympy functions here
-
+import sympy
 
 ELEMENTS = [
     'H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne',
