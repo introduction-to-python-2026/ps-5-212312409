@@ -23,15 +23,10 @@ def split_at_number(formula):
     return formula, 1
 
 def count_atoms_in_molecule(molecular_formula):
-
-    # Step 1: Initialize an empty dictionary to store atom counts
     atom_dict = {}
-
-    # Step 2: Update the dictionary with the atom name and count
     for atom in split_by_capitals(molecular_formula):
         atom_name, atom_count = split_at_number(atom)
         atom_dict[atom_name] = atom_count
-    
     return atom_dict
 
 
