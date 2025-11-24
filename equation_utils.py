@@ -26,9 +26,7 @@ def generate_equation_for_element(compounds, coefficients, element):
 
 
 def build_equations(reactant_atoms, product_atoms):
-    """Builds a list of symbolic equations for each element to balance a chemical reaction.  
-    Example: For H2 + O2 -> H2O, returns equations [2*a0 - 2*b0, a1 - b0]."""
-    ## coefficients ##
+
     reactant_coefficients = list(symbols(f'a0:{len(reactant_atoms)}'))
     product_coefficients = list(symbols(f'b0:{len(product_atoms)}')) 
     product_coefficients = product_coefficients[:-1] + [1] # Ensure the last coefficient is 1
@@ -45,9 +43,8 @@ def build_equations(reactant_atoms, product_atoms):
 
 
 def my_solve(equations, coefficients):
-    """Solves the system of equations for the coefficients of the reaction.  
-    Example: For equations [2*a0 - 2*b0, a1 - b0], returns [1.0, 1.0]."""
-    solution = sympy_solve(equations, coefficients)
+
+    solution = solve(equations, coefficients)
 
     if len(solution) == len(coefficients):
         coefficient_values = list()
