@@ -23,15 +23,15 @@ def split_at_digit(formula):
     return formula, 1
         
 def count_atoms_in_molecule(molecular_formula):
-    atom_dict = {}
+    atoms_count_dict = {}
     for atom in split_befor_uppercases(molecular_formula):
         atom_name, atom_count = split_at_digit(atom)
-        atom_dict[atom_name] = atom_count_dict.get(atom_name, 0) + atom_count
-    return atom_count_dict
+        atoms_count_dict[atom_name] = atoms_count_dict.get(atom_name, 0) + atom_count
+    return atoms_count_dict
 
 def parse_chemical_reaction(reaction_equation):
     
-    reaction_equation = reaction_equation.replace(" ", "")  # Remove spaces for easier parsing
+    reaction_equation = reaction_equation.replace(" ", "")
     reactants, products = reaction_equation.split("->")
     return reactants.split("+"), products.split("+")
 
