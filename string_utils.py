@@ -1,27 +1,27 @@
-def split_by_capitals(formula):
-    split_formula = []
+def split_befor_uppercases(formula):
     start = 0
-    end = 0   
-    
-    if formula == "":
-      return split_formula
+    end = 1
+    elements_lst = []
 
-    for i in range(1, len(formula)):
-        if formula[i].isupper():
-            end = i
-            split_formula.append(formula[start:end])
+    if not formula:
+        return elements_lst
+        
+    while end < len(formula):
+        if formula[end].isupper():
+        elements_lst.append(formula[start:end])
             start = end
-    
-    split_formula.append(formula[start:])
-    return split_formula
+        end+=1
+        
+    elements_lst.append(formula[start:])
 
-def split_at_number(formula):
-    for i in range(len(formula)):
-        if formula[i].isdigit():
-            return formula[:i], int(formula[i:])
-    
+    return element_lst
+
+def split_at_digit(formula):
+    for char_index, char in enumerate(formula):
+        if char.isdigit():
+            return formula[:char_index], int(formula[char_index:])
     return formula, 1
-
+        
 def count_atoms_in_molecule(molecular_formula):
     atom_dict = {}
     for atom in split_by_capitals(molecular_formula):
